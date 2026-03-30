@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NTC Interns Gallery</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #050505;
+            --surface: rgba(255,255,255,0.08);
+            --border: rgba(255,255,255,0.15);
+            --accent: #8f5cff;
+            --accent2: #ff3aa2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(143, 92, 255, 0.18), transparent 35%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 58, 162, 0.16), transparent 28%),
+                        var(--bg);
+            color: #fff;
+            font-family: "Arial Black", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem 3rem;
+        }
+
+        .gallery {
+            width: min(98vw, 1080px);
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .gallery-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .gallery-header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 4rem);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            text-shadow: 0 0 18px rgba(255,255,255,0.2);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.6rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            box-shadow: 0 20px 45px rgba(143, 92, 255, 0.22);
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            padding: 1rem;
+            border-radius: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card:nth-child(odd) {
+            animation-delay: 0.15s;
+        }
+
+        .card:nth-child(even) {
+            animation-delay: 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 22px;
+            display: block;
+            margin-bottom: 0.9rem;
+            transition: transform 0.35s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.03);
+        }
+
+        .card span {
+            display: block;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @media (max-width: 640px) {
+            .gallery-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .back-link {
+                width: 100%;
+            }
+
+            .card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="gallery">
+        <div class="gallery-header">
+            <h1>Photo Gallery</h1>
+            <a class="back-link" href="ntc.html">Back to NTC Interns</a>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="abraham.jpeg" alt="abraham">
+                <span>abraham</span>
+            </div>
+            <div class="card">
+                <img src="boy maas.jpeg" alt="boy maas">
+                <span>boy maas</span>
+            </div>
+            <div class="card">
+                <img src="boy tulog.jpeg" alt="boy tulog">
+                <span>boy tulog</span>
+            </div>
+            <div class="card">
+                <img src="hazel.jpeg" alt="hazel">
+                <span>hazel</span>
+            </div>
+            <div class="card">
+                <img src="jennefer.jpeg" alt="jennefer">
+                <span>jennefer</span>
+            </div>
+            <div class="card">
+                <img src="leo.jpeg" alt="leo">
+                <span>leo</span>
+            </div>
+            <div class="card">
+                <img src="parjun.jpeg" alt="parjun">
+                <span>parjun</span>
+            </div>
+            <div class="card">
+                <img src="kerstine.jpeg" alt="kerstine">
+                <span>kerstine</span>
+            </div>
+            <div class="card">
+                <img src="shamil.jpeg" alt="shamilya">
+                <span>shamilya</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
