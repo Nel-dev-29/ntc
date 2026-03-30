@@ -27,8 +27,10 @@
             color: #fff;
             font-family: "Arial Black", Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             padding: 2rem 1rem 3rem;
+            gap: 3rem;
         }
 
         .gallery {
@@ -52,6 +54,14 @@
             letter-spacing: 0.18em;
             text-transform: uppercase;
             text-shadow: 0 0 18px rgba(255,255,255,0.2);
+        }
+
+        .section-label {
+            margin: 0 0 1rem;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
         }
 
         .back-link {
@@ -98,7 +108,8 @@
             animation-delay: 0.3s;
         }
 
-        .card img {
+        .card img,
+        .card video {
             width: 100%;
             height: 240px;
             object-fit: cover;
@@ -108,7 +119,8 @@
             transition: transform 0.35s ease;
         }
 
-        .card:hover img {
+        .card:hover img,
+        .card:hover video {
             transform: scale(1.03);
         }
 
@@ -184,10 +196,35 @@
             <div class="card">
                 <img src="shamil.jpeg" alt="shamilya">
                 <span>shamilya</span>
-                  </div>
+
+            </div>
             <div class="card">
                 <img src="mr. xu.jpeg" alt="Gerard">
                 <span>Gerard</span>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="gallery-header">
+            <h1>Video Gallery</h1>
+        </div>
+        <p class="section-label">mga ganap</p>
+        <div class="cards">
+            <div class="card">
+                <video src="1.mp4" controls></video>
+                <span>boy scanner</span>
+            </div>
+            <div class="card">
+                <video src="2.mp4" controls></video>
+                <span>Coke lover</span>
+            </div>
+            <div class="card">
+                <video src="3.mp4" controls></video>
+                <span>Jamming</span>
+            </div>
+            <div class="card">
+                <video src="4.mp4" controls></video>
+                <span>mapagpanggap</span>
             </div>
         </div>
     </section>
